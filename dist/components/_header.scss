@@ -17,7 +17,7 @@
         }
         h3{
             color: $clr-light;
-            font-size:2rem;
+            font-size:3rem;
         }
         ul{
             display: none;
@@ -35,7 +35,7 @@
             width: 15rem;
             padding: 2rem;
         }
-        ul{
+        ul.nav{
             display: flex;
             flex-direction: column;
             margin-top: 6rem;
@@ -49,8 +49,29 @@
                     justify-content: space-between;
                     i{
                         color: $clr-dark;
+                        transition: .5s ease;
+                        &.open{
+                            transform: rotate(90deg);
+                            transition: .5s ease;
+                        }
                     }
                     
+                }
+            }
+            ul.drop{
+                background: $clr-light;
+                margin: 0 3rem;
+                max-height: 0rem;
+                overflow: hidden;
+                transition: .5s ease;
+                li{
+                    a{
+                        font-size: 1.5rem;
+                    }
+                }
+                &.open{
+                    max-height: 50rem;
+                    transition: .5s ease;
                 }
             }
         }
@@ -116,6 +137,11 @@
          }
          &__btn{
             display: none;
+        }
+    }
+    @include mediaQuery($break-lg){
+        &__nav{
+            display:none;
         }
     }
 }
