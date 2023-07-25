@@ -5,11 +5,13 @@
     color: $clr-dark;
     font-weight:550;
     position: relative;
+    border-radius: 1rem;
     &.bg{
         &--primary{
             background: $clr-primary;
             color: $clr-light;
             border: 1px solid $clr-light;
+            border-radius: 1rem;
             &::before{
                 content: "";
                 width: 0%;
@@ -27,6 +29,7 @@
             &:hover::before{
                 width: 100%;
                 transition: .5s ease;
+                border-radius: 1rem;
             }
             &:hover{
                 color: $clr-primary;
@@ -51,12 +54,14 @@
                 left: 0;
                 z-index: -1;
                 transition: .5s ease;
+                border-radius: 1rem;
                 
             }
         
         &:hover::before{
             width: 100%;
             transition: .5s ease;
+            border-radius: 1rem;
         }
         &:hover{
             color: $clr-light;
