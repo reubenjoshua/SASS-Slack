@@ -1,37 +1,44 @@
 .banner{
     background: $clr-primary;
-    padding-top: 8rem;
+    padding-top: 7rem;
     position: relative;
     width: 100%;
     z-index: -1;
     .banner__vid{
         video{
-            @include imgFit(100%, 100%);
+            @include imgFit(100%, 100%)
+            
         }
     }
-    .container{
-        
-    }
-    video{
-        max-width:700px;
-    }
+
     &__wrapper{
         padding: 1rem;
+        
         .btn{
             display: flex;
-            flex-direction: column;
+            align-items: center;
             text-align: center;
-            margin-bottom: 2rem;
+            
         }
         ul li:hover a:after{
             width: 0;
         }
-        a img{
-            max-width: 4rem;
-            
-            
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 2rem;
+            img{
+                position: absolute;
+                width: 2rem;
+                left: 1rem;
+                background-color: $clr-light;
+                padding: .5rem;
+                height: 3rem;
+                width: 3rem;
+            }
         }
-       
         
     }
     h1{
@@ -49,6 +56,56 @@
         margin-bottom:2rem;
     }
     
+    @include mediaQuery ($break-xl){
+        &__wrapper{
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            align-items: center;
+        }
+        &__nav__btn{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            flex-direction: row;
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                position: relative;
+                width: 100%;
+            }
+
+            
+            
+        }
     
+        
+        
+    }
     
 }
+.brands{
+    background: $clr-fwhite;
+    .brands__wrapper{
+        background: $clr-fwhite;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        ul{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 3rem;
+            
+        }
+    }
+    
+    h2{
+        font-size: 1.5rem;
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+}
+
+
+
