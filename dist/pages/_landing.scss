@@ -1,0 +1,54 @@
+.banner{
+    background: $clr-primary;
+    padding-top: 8rem;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    .banner__vid{
+        video{
+            @include imgFit(100%, 100%);
+        }
+    }
+    .container{
+        
+    }
+    video{
+        max-width:700px;
+    }
+    &__wrapper{
+        padding: 1rem;
+        .btn{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        ul li:hover a:after{
+            width: 0;
+        }
+        a img{
+            max-width: 4rem;
+            
+            
+        }
+       
+        
+    }
+    h1{
+        color: $clr-light;
+        font-size:4rem;
+        text-align: center;
+        span{
+            color: #ffa700;
+        }
+    }  
+    p{
+        color: $clr-light;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom:2rem;
+    }
+    
+    
+    
+}
