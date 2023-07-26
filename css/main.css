@@ -386,8 +386,7 @@ body {
 }
 .banner h1 {
   color: hsl(0, 0%, 100%);
-  font-size: 4rem;
-  text-align: center;
+  font-size: 5rem;
 }
 .banner h1 span {
   color: #ffa700;
@@ -403,6 +402,13 @@ body {
     display: grid;
     grid-template-columns: 2fr 2fr;
     align-items: center;
+    gap: 10rem;
+  }
+  .banner__text h1 {
+    font-size: 6rem;
+  }
+  .banner__text p {
+    text-align: justify;
   }
   .banner__nav__btn {
     display: flex;
@@ -421,18 +427,21 @@ body {
 
 .brands {
   background: hsl(34, 42%, 93%);
-}
-.brands .brands__wrapper {
   background: hsl(34, 42%, 93%);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
-.brands .brands__wrapper ul {
+.brands__title {
+  text-align: center;
+}
+.brands ul {
   display: flex;
   align-items: center;
-  flex-direction: row;
-  gap: 3rem;
+  max-width: 30rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.brands ul img {
+  width: 10rem;
+  padding: 1rem;
 }
 .brands h2 {
   font-size: 1.5rem;

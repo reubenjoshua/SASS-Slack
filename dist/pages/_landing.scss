@@ -14,6 +14,7 @@
     &__wrapper{
         padding: 1rem;
         
+        
         .btn{
             display: flex;
             align-items: center;
@@ -43,8 +44,8 @@
     }
     h1{
         color: $clr-light;
-        font-size:4rem;
-        text-align: center;
+        font-size:5rem;
+        
         span{
             color: #ffa700;
         }
@@ -59,14 +60,27 @@
     @include mediaQuery ($break-xl){
         &__wrapper{
             display: grid;
-            grid-template-columns: 2fr 2fr;
+            grid-template-columns:2fr 2fr;
             align-items: center;
+            gap: 10rem;
+        }
+        &__text{
+            h1{
+                font-size: 6rem;
+                
+            }
+            p{
+                text-align: justify;
+            }
         }
         &__nav__btn{
             display: flex;
             text-align: center;
             justify-content: center;
             flex-direction: row;
+            
+            
+            
             a{
                 display: flex;
                 align-items: center;
@@ -74,10 +88,9 @@
                 position: relative;
                 width: 100%;
             }
-
-            
-            
         }
+        
+        
     
         
         
@@ -86,19 +99,22 @@
 }
 .brands{
     background: $clr-fwhite;
-    .brands__wrapper{
-        background: $clr-fwhite;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+    background: $clr-fwhite;
+        &__title{
+            text-align: center;
+        }
         ul{
             display: flex;
             align-items: center;
-            flex-direction: row;
-            gap: 3rem;
-            
+            max-width: 30rem;
+            flex-wrap: wrap;
+            margin: 0 auto;
+          img{
+            width: 10rem;
+            padding: 1rem;
+          }
         }
-    }
+    
     
     h2{
         font-size: 1.5rem;
