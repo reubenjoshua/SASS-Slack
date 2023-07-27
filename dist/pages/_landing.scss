@@ -48,7 +48,7 @@
         text-align: center;
         
         span{
-            color: #ffa700;
+            color : #ffa700;
         }
     }  
     p{
@@ -162,20 +162,37 @@
     video{
         padding-top: 2rem;
         @include imgFit(100%, 100%);
+        
     }
     &__items:first-child{
+        margin:3rem 0;
+        padding-bottom: 5rem;
         video{
+            padding-bottom: 3rem;
             transform: translateX(-3rem);
+            border-top-right-radius: 15rem;
+            border-bottom-right-radius: 20rem;
         }
     }
     &__items:nth-child(2){
+        margin: 3rem 0;
+        padding-bottom: 5rem;
         video{
-        transform: translateX(3rem);
+        padding-bottom: 3rem;
+        transform: translateX(4rem);
+        border-top-left-radius: 15rem;
+        border-bottom-left-radius: 20rem;
+        
     }
     }
     &__items:last-child{
+        margin: 3rem 0;
+        padding-bottom: 5rem;
         video{
+            padding-bottom: 3rem;
             transform: translateX(-3rem);
+            border-top-right-radius: 15rem;
+            border-bottom-right-radius: 20rem;
         }
     }
     
@@ -189,35 +206,41 @@
     }
     a{
         font-size: 2rem;
+        color: 	#4285F4;
+        i{
+            font-size: 1.5rem;
+            margin-left: 1.5rem;
+        }
+
     }
 
     @include mediaQuery($break-xl){
+       &__items:first-child{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        align-items: center;
         video{
-            max-width: 45rem;
+            @include imgFit(70%, 60%);
             margin: 0 auto;
         }
-        &__items:nth-child(even){
-            video{
-                transform: translate(90rem);
-            }
-            
-        }
-        &__text:nth-child(even){
-            h1{
-                margin-left: 50rem;
-                
-            }
-            p{
-                margin-left: 50rem;
-            }
-            
-        }
+       }
+       &__items:nth-child(2){
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+       }
+       
+       &__items:nth-child(3){
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        align-items: center;
+       }
         
         
 
     }
-    
-}
+}  
+
 
 
 
