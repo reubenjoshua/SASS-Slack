@@ -1101,20 +1101,106 @@ body {
     align-items: center;
   }
   .slack__items:first-child video {
-    width: 70%;
+    width: 90%;
     height: 60%;
     -o-object-fit: cover;
        object-fit: cover;
     margin: 0 auto;
+    padding-left: 3rem;
+  }
+  .slack__text {
+    max-width: 88%;
+    margin: 0 auto;
+  }
+  .slack__text h1 {
+    font-size: 5rem;
+  }
+  .slack__text p:nth-child(2) {
+    max-width: 70%;
   }
   .slack__items:nth-child(2) {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
   }
+  .slack__items:nth-child(2) video {
+    width: 95%;
+    height: 90%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .slack__items:nth-child(3) {
     display: grid;
     grid-template-columns: 2fr 2fr;
     align-items: center;
   }
+  .slack__items:nth-child(3) video {
+    width: 90%;
+    height: 60%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding-left: 3rem;
+  }
+}
+
+.teams {
+  background: hsl(0, 0%, 100%);
+}
+.teams__text {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+.teams__text h1 {
+  font-size: 4rem;
+  padding: 3rem 0;
+}
+.teams__text a {
+  display: grid;
+  margin: 1rem 0;
+}
+.teams__p {
+  align-items: center;
+}
+.teams__p ul {
+  align-items: center;
+}
+.teams__p ul li {
+  text-align: center;
+}
+.teams__p ul li h2 {
+  color: hsl(294, 54%, 27%);
+  font-size: 5rem;
+  text-align: center;
+}
+
+.footer__left ul li {
+  font-size: 1.4rem;
+  padding: 2rem 0;
+  font-weight: bold;
+}
+.footer__left ul li a {
+  color: hsl(0, 0%, 0%);
+}
+.footer__left .modal {
+  padding: 2rem;
+  overflow-y: auto;
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: hsl(0, 0%, 100%);
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+.footer__left .modal.active {
+  display: block;
+}
+.footer__left .modal button {
+  float: right;
+  background: transparent;
+  border: 0 solid transparent;
+  font-size: 2.5rem;
 }/*# sourceMappingURL=main.css.map */
