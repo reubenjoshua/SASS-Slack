@@ -281,7 +281,8 @@
     &__p{
         align-items: center;
         ul{
-            align-items: center;
+            width: 50%;
+            margin: 0 auto;
             li{
                 text-align: center;
                 h2{
@@ -289,6 +290,36 @@
                     font-size: 5rem;
                     text-align: center;
                 }
+            }
+        }
+    }
+    .teams__items{
+        video{
+            @include imgFit(100%, 100%);
+            border-top-right-radius: 15rem;
+            border-bottom-right-radius: 15rem;
+            transform: translateX(-2rem);
+            margin-top: 8rem;
+        }
+        h1{
+            font-size: 2rem;
+            width: 90%;
+            text-align: left;
+            font-style: italic;
+            font-weight: 500;
+        }
+        h2{
+            font-size: 1.5rem;
+            text-align: left;
+        }
+        p{
+            text-align: left;
+        }
+        a{
+            text-align: left;
+            font-size: 2rem;
+            i{
+                
             }
         }
     }

@@ -27,12 +27,18 @@ const modal = document.querySelector('.modal');
 const btnRegion = document.querySelector('.region');
 const btnClose = document.querySelector('#closeModal');
 
-btnRegion.addEventListener('click',()=>{
+const openModalhandler = () =>{
     btnRegion.classList.toggle('active')
     btnRegion.nextElementSibling.classList.toggle('active')
-})
+}
 
-btnClose.addEventListener('click',()=>{
+const closeModalHandler = () =>{
+    console.log('run')
     modal.classList.toggle('active');
     btnRegion.classList.toggle('active')
-})
+}
+
+
+
+btnClose.addEventListener('click',closeModalHandler)
+btnRegion.addEventListener('click',openModalhandler);
