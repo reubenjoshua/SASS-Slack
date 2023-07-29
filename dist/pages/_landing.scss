@@ -31,7 +31,6 @@
             position: relative;
             margin: 2rem;
             img{
-                position: absolute;
                 width: 2rem;
                 left: 1rem;
                 background-color: $clr-light;
@@ -179,7 +178,7 @@
         padding-bottom: 5rem;
         video{
         padding-bottom: 3rem;
-        transform: translateX(4rem);
+        transform: translateX(2rem);
         border-top-left-radius: 15rem;
         border-bottom-left-radius: 20rem;
         
@@ -396,6 +395,34 @@
                 
                     
                    
+            }
+        }
+    
+    }
+    .accomp{
+        align-items: center;
+        width: 100%;
+        .container{
+            height: 45rem;
+            background: $clr-primary;
+            clip-path: ellipse(100% 90% at center top);
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        
+        &__title{
+            padding-top: 5rem;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 0 auto;
+            
+            h1{
+                font-size: 3rem;
+                color: $clr-light;
+                text-align: center;
             }
         }
     }

@@ -929,7 +929,6 @@ body {
   margin: 2rem;
 }
 .banner__wrapper a img {
-  position: absolute;
   width: 2rem;
   left: 1rem;
   background-color: hsl(0, 0%, 100%);
@@ -1064,7 +1063,7 @@ body {
 }
 .slack__items:nth-child(2) video {
   padding-bottom: 3rem;
-  transform: translateX(4rem);
+  transform: translateX(2rem);
   border-top-left-radius: 15rem;
   border-bottom-left-radius: 20rem;
 }
@@ -1260,6 +1259,32 @@ body {
   .teams .teams__items a {
     text-align: left;
   }
+}
+
+.accomp {
+  align-items: center;
+  width: 100%;
+}
+.accomp .container {
+  height: 45rem;
+  background: hsl(294, 54%, 27%);
+  -webkit-clip-path: ellipse(100% 90% at center top);
+          clip-path: ellipse(100% 90% at center top);
+  width: 100%;
+  margin: 0 auto;
+}
+.accomp__title {
+  padding-top: 5rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+}
+.accomp__title h1 {
+  font-size: 3rem;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
 }
 
 .footer__left ul li {
