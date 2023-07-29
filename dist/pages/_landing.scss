@@ -263,28 +263,26 @@
 }
 .teams{
     background: $clr-light;
+    text-align: center;
     &__text{
-       text-align: center; 
        padding-bottom: 5rem;
        h1{
-        font-size: 4rem;
+        font-size: 3rem;
         padding: 3rem 0;
        }
-       p{
-        
-       }
        a{
+        margin: 2rem 0;
         display: grid;
-        margin: 1rem 0;
        }
     }
     &__p{
-        align-items: center;
+        width: 50%;
+        margin: 0 auto;
         ul{
-            width: 50%;
-            margin: 0 auto;
+            
             li{
                 text-align: center;
+                padding-bottom: 2rem;
                 h2{
                     color: $clr-primary;
                     font-size: 5rem;
@@ -314,16 +312,96 @@
         }
         p{
             text-align: left;
+            padding-bottom: 2rem;
+        }
+        p:last-child{
+            text-align: center;
+            padding-top: 3rem;
+            font-size: 1.2rem;
+            width: 90%;
+            margin: 0 auto;
         }
         a{
-            text-align: left;
             font-size: 2rem;
+            text-align: left;
+            
             i{
-                
+                padding-left: 1.2rem;
             }
         }
     }
-}
+    &__last{
+        font-size: 1.2rem;
+        padding-bottom: 3rem;
+    }
+    @include mediaQuery ($break-lg){
+        .teams{
+            background: $clr-light;
+            
+            &__text:first-child{
+                text-align: center;
+                h1{
+                    font-size: 6rem;
+                }
+                p{
+                    padding-bottom: 2rem;
+                }
+                a{
+                    display: inline-block;
+                }
+                
+            }
+            &__p{
+                ul{
+                    display: flex;
+                    max-width: 100rem;
+                    gap: 25rem;
+                    justify-content: space-around;
+                    li{
+                        h2{
+                            font-size: 8rem;
+                        }
+                        p{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            &__items{
+                    display: grid;
+                    grid-template-columns: 2fr 2fr;
+                    grid-column-gap: 3rem;
+                    video{
+                        justify-content: center;
+                        @include imgFit(100%, 70%)
+                        
+                    }
+                    h1{
+                    padding-top: 13rem;
+                    }
+                    a{
+                        text-align: left;
+                        i{
+                            
+                        }
+                    }
+            
+                }
+                
+                &__text{
+                    p:last-child{
+                        
+                    }
+                }
+                
+                    
+                   
+            }
+        }
+    }
+
+
+
 
 
 
