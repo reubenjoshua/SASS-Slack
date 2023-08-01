@@ -780,7 +780,7 @@ body {
   background: hsl(294, 54%, 27%);
   color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 100%);
-  border-radius: 1rem;
+  border-radius: 0rem;
 }
 .btn.bg--primary::before {
   content: "";
@@ -836,42 +836,37 @@ body {
   border: 1px solid hsl(294, 54%, 27%);
   transition: 0.5s ease;
 }
-.btn.bg--white {
+
+.button {
+  display: inline-block;
+  padding: 1.5rem 1rem;
+  border: 1px solid transparent;
+  color: hsl(0, 0%, 0%);
+  font-weight: 600;
+  position: relative;
+  border-radius: 1rem;
+}
+.button.bg--mail {
   background: hsl(0, 0%, 100%);
   color: hsl(294, 54%, 27%);
   border: 1px solid hsl(0, 0%, 100%);
-  border-radius: 1rem;
 }
-.btn.bg--white::before {
-  content: "";
-  width: 0%;
-  height: 100%;
-  background-color: hsl(0, 0%, 100%);
-  transform-origin: left;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: 0.5s ease;
-}
-.btn.bg--white:hover::before {
+.button.bg--mail:hover::before {
   width: 100%;
   transition: 0.5s ease;
   border-radius: 1rem;
 }
-.btn.bg--white:hover {
-  color: hsl(0, 0%, 100%);
-  z-index: 999;
-  border: 3px solid hsl(0, 0%, 100%);
+.button.bg--mail:hover {
+  color: hsl(294, 54%, 27%);
+  border: 1px solid hsl(294, 54%, 27%);
   transition: 0.5s ease;
 }
-.btn.bg--blue {
+.button.bg--blue {
   background: #4285F4;
   color: hsl(0, 0%, 100%);
   border: 1px solid hsl(294, 54%, 27%);
 }
-.btn.bg--blue::before {
+.button.bg--blue::before {
   content: "";
   width: 0%;
   height: 100%;
@@ -885,12 +880,12 @@ body {
   transition: 0.5s ease;
   border-radius: 1rem;
 }
-.btn.bg--blue:hover::before {
+.button.bg--blue:hover::before {
   width: 100%;
   transition: 0.5s ease;
   border-radius: 1rem;
 }
-.btn.bg--blue:hover {
+.button.bg--blue:hover {
   color: hsl(0, 0%, 100%);
   z-index: 999;
   border: 1px solid hsl(294, 54%, 27%);
@@ -917,9 +912,6 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-}
-.banner__wrapper ul li:hover a:after {
-  width: 0;
 }
 .banner__wrapper a {
   display: flex;
@@ -1144,7 +1136,6 @@ body {
 
 .teams {
   background: hsl(0, 0%, 100%);
-  text-align: center;
 }
 .teams__text {
   padding-bottom: 5rem;
@@ -1152,10 +1143,15 @@ body {
 .teams__text h1 {
   font-size: 3rem;
   padding: 3rem 0;
+  text-align: center;
+}
+.teams__text p {
+  text-align: center;
 }
 .teams__text a {
   margin: 2rem 0;
   display: grid;
+  text-align: center;
 }
 .teams__p {
   width: 50%;
@@ -1205,6 +1201,7 @@ body {
 .teams .teams__items a {
   font-size: 2rem;
   text-align: left;
+  display: unset;
 }
 .teams .teams__items a i {
   padding-left: 1.2rem;
@@ -1212,6 +1209,7 @@ body {
 .teams__last {
   font-size: 1.2rem;
   padding-bottom: 3rem;
+  text-align: center;
 }
 @media screen and (min-width: 940px) {
   .teams .teams {
@@ -1356,6 +1354,34 @@ body {
   font-size: 3rem;
   color: hsl(0, 0%, 100%);
   text-align: center;
+  margin-bottom: 1.5rem;
+}
+.accomp__buttons {
+  display: grid;
+  gap: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 940px) {
+  .accomp {
+    background: #4a154b;
+    -webkit-clip-path: ellipse(75% 100% at center top);
+            clip-path: ellipse(75% 100% at center top);
+    height: 35rem;
+  }
+  .accomp .container {
+    background: #4a154b;
+  }
+  .accomp__title h1 {
+    font-size: 5rem;
+  }
+  .accomp__buttons {
+    display: flex;
+    justify-content: center;
+  }
+  .accomp__buttons a {
+    align-items: center;
+  }
 }
 
 .footer ul {

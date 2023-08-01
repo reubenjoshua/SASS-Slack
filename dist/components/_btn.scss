@@ -11,7 +11,7 @@
             background: $clr-primary;
             color: $clr-light;
             border: 1px solid $clr-light;
-            border-radius: 1rem;
+            border-radius: 0rem;
             &::before{
                 content: "";
                 width: 0%;
@@ -71,37 +71,35 @@
         }
     }
     }
+
+    
+    
+}
+
+.button{
+    display: inline-block;
+    padding: 1.5rem 1rem;
+    border: 1px solid transparent;
+    color: $clr-dark;
+    font-weight: 600;
+    position: relative;
+    border-radius: 1rem;
     &.bg{
-        &--white{
+        &--mail{
             background: $clr-light;
             color: $clr-primary;
             border: 1px solid $clr-light;
-            border-radius: 1rem;
-            &::before{
-                content: "";
-                width: 0%;
-                height: 100%;
-                background-color: $clr-light;
-                transform-origin: left;
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: .5s ease;
-                
-            }
             &:hover::before{
                 width: 100%;
                 transition: .5s ease;
                 border-radius: 1rem;
             }
             &:hover{
-                color: $clr-light;
-                z-index: 999;
-                border: 3px solid $clr-light;
+                color: $clr-primary;
+                border: 1px solid $clr-primary;
                 transition: .5s ease;
             }
+            
         }
         &--blue{
             background: #4285F4;

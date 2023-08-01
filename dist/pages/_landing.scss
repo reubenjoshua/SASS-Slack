@@ -4,6 +4,7 @@
     position: relative;
     width: 100%;
     z-index: -1;
+
     .banner__vid{
         video{
             @include imgFit(100%, 100%)
@@ -19,11 +20,9 @@
             display: flex;
             align-items: center;
             text-align: center;
-            
         }
-        ul li:hover a:after{
-            width: 0;
-        }
+        
+        
         a {
             display: flex;
             align-items: center;
@@ -262,18 +261,24 @@
 }
 .teams{
     background: $clr-light;
-    text-align: center;
+    
     &__text{
        padding-bottom: 5rem;
        h1{
         font-size: 3rem;
         padding: 3rem 0;
+        text-align: center;
+       }
+       p{
+        text-align: center;
        }
        a{
         margin: 2rem 0;
         display: grid;
+        text-align: center;
        }
     }
+    
     &__p{
         width: 50%;
         margin: 0 auto;
@@ -323,6 +328,7 @@
         a{
             font-size: 2rem;
             text-align: left;
+            display: unset;
             
             i{
                 padding-left: 1.2rem;
@@ -332,6 +338,7 @@
     &__last{
         font-size: 1.2rem;
         padding-bottom: 3rem;
+        text-align: center;
     }
     @include mediaQuery ($break-lg){
         .teams{
@@ -385,16 +392,7 @@
                         }
                     }
             
-                }
-                
-                &__text{
-                    p:last-child{
-                        
-                    }
-                }
-                
-                    
-                   
+                }       
             }
         }
     
@@ -510,6 +508,38 @@
                 font-size: 3rem;
                 color: $clr-light;
                 text-align: center;
+                margin-bottom: 1.5rem;
+            }
+        }
+        &__buttons{
+            display: grid;
+            gap: 2rem;
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        @include mediaQuery ($break-lg){
+            background: #4a154b;
+            clip-path: ellipse(75% 100% at center top);
+            height: 35rem;
+
+            .container{
+                background: #4a154b;
+            }
+            
+            &__title{
+                h1{
+                    font-size: 5rem;
+                }
+            }
+            
+            &__buttons{
+                display: flex;
+                justify-content: center;
+                a{
+                    align-items: center;
+                    
+                }
             }
         }
     }
